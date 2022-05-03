@@ -64,7 +64,7 @@ code: |
 ---
 code: |
   freelance_yn.question = \
-    'Werkt u als zelfstandige?''
+    'Werkt u als zelfstandige?'
 ---
 code: |
   one_cs_yn.question = \
