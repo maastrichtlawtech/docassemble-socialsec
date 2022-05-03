@@ -1,0 +1,177 @@
+mandatory: True
+code: |
+  opening_notice
+  if civil_servant_yn:
+    worker_type = 'civil servant'
+    if not one_cs_yn:
+      one_cs
+    else:
+      # explain drop anything that is not cs
+      explain_only_cs
+      employee_tree
+  elif employee_yn:
+    worker_type = 'employee'
+    if one_physical_ms:
+      physical_ms
+    else:
+      employee_freelance_notice
+      employee_tree
+  elif freelance_yn:
+    if one_physical_ms_freelance:
+      physical_ms
+    elif twentyfive_percent_freelance:
+      residence_country
+    else:
+      center_of_interest
+  else:
+    need_work
+---
+code: |
+  if twentyfive_percent:
+    residence_country
+  else:
+    non_eu_employer_notice
+    if one_employer:
+      employer_ms
+    elif employers_one_ms:
+      employer_ms
+    elif two_ms_one_res:
+      not_res_country
+    elif multiple_non_res_ms:
+      residence_country
+    else:
+      edge_case
+  employee_tree = True
+---
+question: Notice
+subquestion: |
+  This module assists in determining in which member state social security premiums need to be paid in case you are performing activities simultaneously in two or more member states.
+
+  Be aware:
+  
+  - For taxation one has to look at the applicable tax treaty. This module is not about taxation.
+  - This app is according the current applicable rules (Regulation No 883/2004). According to COVID-19 measures the rules can be ignored in case a cross border worker is obliged to work at home due to the crisis. This measure runs until 1 January 2022.
+continue button field: opening_notice
+---
+question: Notice
+subquestion: |
+  For the next questions, only take into account your role as Civil Servant - disregard any work as regular employee or freelance work.
+
+  For example, if you work for a Dutch municipality (and are thus working as civil servant) and for a commercial company in Germany, ignore the function as employee in Germany when answering the next questions.
+continue button field: explain_only_cs
+---
+question: Notice
+subquestion: If you perform activities in two or more Member States on behalf of an employer established outside the territory of the European Union, your social security is always in the Member State of residence.
+continue button field: non_eu_employer_notice
+---
+question: Notice
+subquestion: If you perform work as an employee and work freelance, your work as an employee will determine where your social security is.
+continue button field: employee_freelance_notice
+---
+question: Are you a civil servant?
+subquestion: |
+  Be aware: ensure that you are treated as a civil servant under current legislation. This has recently changed for people in Dutch education under the "Wet Normalisering Rechtspositie Ambtenaren", who are no longer treated as civil servant.
+yesno: civil_servant_yn
+---
+question: Do you work as an employee?
+yesno: employee_yn
+---
+question: Do you perform freelance work?
+yesno: freelance_yn
+---
+question: Are you employed as a civil servant by organizations subject to legislation in multiple member states?
+subquestion: For example, are you employed by both a municipality in the Netherlands and one in Germany?
+yesno: one_cs_yn
+---
+question: Do you perform your work as ${ worker_type } in one member state (not in case of posting)?
+yesno: one_physical_ms
+---
+question: Do you perform more than 25% of your working time and/or receive 25% of your total remuneration as ${ worker_type } in your country of residence?
+yesno: twentyfive_percent
+---
+question: Are you employed by one undertaking or employer?
+yesno: one_employer
+---
+question: Are you performing more than 25% of your turnover, working time, number of services rendered and/or income in the residence member state?
+yesno: twentyfive_percent_freelance
+---
+question: Are you employed by organizations in two member states, one of which is your residence state?
+yesno: two_ms_one_res
+---
+question: Are you performing activities for two or more undertakings or employers which have their registered office or place of business in only one member state?
+yesno: employers_one_ms
+---
+question: Are you performing activities for two or more employers or undertakings and  at least two of which have their registered office or place of business in different member states other than the member state of residence?
+yesno: multiple_non_res_ms
+---
+question: Do you physically perform your freelance work in one member state?
+yesno: one_physical_ms_freelance
+---
+template: more_info
+content: |
+  See for more information:
+
+  - [Practical guide on 'habitual residence tests' for access to social security | ECAS](https://ecas.issuelab.org/resource/practical-guide-on-the-applicable-legislation-in-the-eu-eea-and-in-switzerland.html)
+  - [GrensInfoPunten – Advies over wonen en werken in het buurland - GrensInfoPunten (grenzinfo.eu)](https://grenzinfo.eu/nl/)
+  - [Homepage SVB | Sociale Verzekeringsbank | SVB](https://www.svb.nl/nl/)
+  - [Home | RSZ](https://www.rsz.be/)
+  - [Willkommen bei der DVKA - GKV-Spitzenverband, DVKA](https://www.dvka.de/)
+---
+event: one_cs
+question: Outcome
+subquestion: Your social security is in the member state to which the administration employing you is subject.
+buttons:
+  Restart: restart
+under: ${ more_info }
+---
+event: residence_country
+question: Outcome
+subquestion: Your social security is in your country of residence. That means your employer is obliged to pay social security contributions in that state.
+buttons:
+  Restart: restart
+under: ${ more_info }
+---
+event: employer_ms
+question: Outcome
+subquestion: you are subjected to the member state in which the registered office or place of business of the undertakings or employers is situated.
+buttons:
+  Restart: restart
+under: ${ more_info }
+---
+event: physical_ms
+question: Outcome
+subquestion: Your social security is in the member state in which you physically perform your work (not in case of posting).
+buttons:
+  Restart: restart
+under: ${ more_info }
+---
+event: edge_case
+question: Outcome
+subquestion: Your situation seems to be an edge case that we cannot easily determine.
+buttons:
+  Restart: restart
+under: ${ more_info }
+---
+event: need_work
+question: Outcome
+subquestion: This tool will only be able to determine social security status if you perform work.
+buttons:
+  Restart: restart
+under: ${ more_info }
+---
+event: not_res_country
+question: Outcome
+subquestion: Out of the two member states in which your two employers are situated, your social security is in the member state that is not your residence state.
+buttons:
+  Restart: restart
+under: ${ more_info }
+---
+event: center_of_interest
+question: Outcome
+subquestion: |
+  Your social security is in the member state that is the centre of interest of your freelance work.
+
+  *The ‘centre of interest’ of the activities of a self-employed person shall be determined by taking account of all the aspects of that person’s occupational activities, notably the place where the person’s fixed and permanent place of business is located, the habitual nature or the duration of the activities pursued, the number of services rendered, and the intention of the person concerned as revealed by all the circumstances*
+buttons:
+  Restart: restart
+under: ${ more_info }

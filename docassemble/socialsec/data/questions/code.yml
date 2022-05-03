@@ -1,0 +1,122 @@
+objects:
+  - outcome_dict: DADict
+  - civil_servant_yn: DAObject
+  - one_cs_yn: DAObject
+  - employee_yn: DAObject
+  - freelance_yn: DAObject
+  - one_physical_ms: DAObject
+  - one_physical_ms_freelance: DAObject
+  - twentyfive_percent_freelance: DAObject
+  - twentyfive_percent: DAObject
+  - one_employer: DAObject
+  - employers_one_ms: DAObject
+  - two_ms_one_res: DAObject
+  - multiple_non_res_ms: DAObject
+---
+initial: True
+code: |
+  all_questions = [
+    civil_servant_yn,
+    one_cs_yn,
+    employee_yn,
+    freelance_yn,
+    one_physical_ms,
+    one_physical_ms_freelance,
+    twentyfive_percent_freelance,
+    twentyfive_percent,
+    one_employer,
+    employers_one_ms,
+    two_ms_one_res,
+    multiple_non_res_ms,
+  ]
+  
+  set_language(language)
+  process_action()
+  need(outcome)
+---
+question: Which language are you most comfortable with? / Met welke taal voelt u zich het meest vertrouwd?
+field: language
+choices:
+  - "English": en
+  - "Nederlands": nl
+---
+code: |
+  def employee_tree():
+    if twentyfive_percent.answer:
+      return outcome_dict['residence_country']
+    else:
+      non_eu_employer_notice
+      if one_employer.answer:
+        return outcome_dict['employer_ms']
+      elif employers_one_ms.answer:
+        return outcome_dict['employer_ms']
+      elif two_ms_one_res.answer:
+        return outcome_dict['not_res_country']
+      elif multiple_non_res_ms.answer:
+        return outcome_dict['residence_country']
+      else:
+        return outcome_dict['edge_case']
+  
+  main_tree = True
+  opening_notice
+  if civil_servant_yn.answer:
+    worker_type = loc_civil_servant
+    if one_cs_yn.answer:
+      outcome_str = outcome_dict['one_cs']
+    else:
+      # explain drop anything that is not cs
+      explain_only_cs
+      outcome_str = employee_tree()
+  elif employee_yn.answer:
+    worker_type = loc_employee
+    if one_physical_ms.answer:
+      outcome_str = outcome_dict['physical_ms']
+    else:
+      employee_freelance_notice
+      outcome_str = employee_tree()
+  elif freelance_yn.answer:
+    if one_physical_ms_freelance.answer:
+      outcome_str = outcome_dict['physical_ms']
+    elif twentyfive_percent_freelance.answer:
+      outcome_str = outcome_dict['residence_country']
+    else:
+      outcome_str = outcome_dict['center_of_interest']
+  else:
+    outcome_str = outcome_dict['need_work']
+---
+generic object: DAObject
+question: ${ x.question }
+subquestion: |
+  % if x.attr('subquestion'):
+    ${ x.subquestion }
+  % endif
+field: x.answer
+buttons:
+  - "${ loc_yes }": True
+  - "${ loc_no }": False
+---
+mandatory: True
+event: outcome
+question: ${ loc_outcome }
+subquestion: |
+  **${ outcome_str }**
+buttons:
+  Restart: restart
+under: |
+  #### ${ loc_review } 
+  % for q in all_questions:
+  % if q.attr('answer') is not None:
+  **${ q.question }**  
+  % if q.attr('answer'):
+  ${ loc_yes }
+  % if q.attr('answer_suppl'):
+  *${ q.answer_suppl }*
+  % endif 
+  % else:
+  ${ loc_no }  
+  % endif
+  ---
+  % endif
+  % endfor
+  
+  ${ more_info }
