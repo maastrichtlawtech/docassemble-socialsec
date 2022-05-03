@@ -26,7 +26,7 @@ Similarly, in this example:
   civil_servant_yn.subquestion = \
     'Please note: ensure that you are treated as a civil servant under current legislation. This has recently changed for people in Dutch education under the "Wet Normalisering Rechtspositie Ambtenaren", who are no longer treated as civil servant.'
 ```
-`civil_servant_yn.question` and `civil_servant_yn.subquestion` are logic and need to stay English, the quoted strings containing the actual question can be changed to a different language.
+`civil_servant_yn.question` and `civil_servant_yn.subquestion` are logic and need to stay English, the quoted strings containing the actual question can be changed to a different language. A Dutch version of the interview is available under 'nl.yml'.
 
 In the case of 'native' docassemble questions (notices etc.), change the `question` and `subquestion`, but don't touch the `continue button field`.
 
@@ -51,4 +51,4 @@ Notices etc. instead follow a more traditional docassemble method for definition
 
 ## Author
 
-Maastricht Law & Tech Lab, Maastricht University
+Maastricht Law & Tech Lab, Maastricht University / Brightlands Institute for Smart Society (BISS)
