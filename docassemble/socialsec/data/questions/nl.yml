@@ -18,9 +18,10 @@ subquestion: |
 
   - Deze module niet over belastingen gaat. Voor belastingheffing moet men kijken naar het van toepassing zijnde belastingverdrag.
   - Deze app is in overeenstemming met de huidige geldende regels (Verordening 883/2004 en Verordening 987/2009). Volgens COVID-19 maatregelen kunnen de regels genegeerd worden in het geval een grensarbeider door de crisis verplicht is om thuis te werken. Deze maatregel loopt tot 1 juli 2022.
-  - U bent onderworpen aan de wetgeving van slechts één enkele lidstaat, uitgevaardigd door het bevoegde orgaan.
+  - U bent onderworpen aan de wetgeving van slechts één enkele lidstaat, vastgesteld door het bevoegde orgaan.
   - Thuiswerken betekent dat u in uw woonstaat werkt.
   - Bij werken in twee of meer lidstaten heeft men een zogenoemd A1-formulier nodig waarin het bevoegde orgaan van de woonstaat bepaalt welke wetgeving van toepassing is.
+  - De app heeft geen betrekking op werkzaamheden die worden verricht aan boord van een zeeschip of in de cockpit of de cabine van een vliegtuig.
 
   Marginale werkzaamheden (<5%) kunnen worden genegeerd.
 
@@ -56,7 +57,7 @@ code: |
   civil_servant_yn.question = \
     'Bent u ambtenaar?'
   civil_servant_yn.subquestion = \
-    'Let op: zorg ervoor dat u volgens de huidige wetgeving als ambtenaar wordt behandeld. Dit is onlangs ingevolge de Wet Normalisering Rechtspositie Ambtenaren bijvoorbeeld veranderd voor personen werkzaam in het Nederlandse onderwijs, die niet langer als ambtenaar worden behandeld.'
+    'Let op: ga goed na of u volgens de huidige wetgeving als ambtenaar moet worden gezien. Dit is ingevolge de Wet Normalisering Rechtspositie Ambtenaren bijvoorbeeld veranderd voor personen werkzaam in het Nederlandse onderwijs, die niet langer als ambtenaar worden behandeld.'
 ---
 code: |
   employee_yn.question = \
@@ -68,7 +69,7 @@ code: |
 ---
 code: |
   one_cs_yn.question = \
-    'Bent u als ambtenaar in dienst van een organisatie die in slechts één lidstaat onderworpen is aan wetgeving?'
+    'Bent u als ambtenaar in dienst van slechts één organisatie in een lidstaat?'
   one_cs_yn.subquestion = \
     'U bent bijvoorbeeld in dienst van een gemeente in Nederland, maar niet in Duitsland of België.'
   one_cs_yn.answer_suppl = \
@@ -78,7 +79,7 @@ code: |
   one_physical_ms.question = \
     f'Verricht u uw werkzaamheden als { worker_type } in één lidstaat (niet als detachering)?'
   one_physical_ms.subquestion = \
-    'Bij detachering is men onderworpen aan de wetgeving van de zendstaat.'
+    'Bij detachering is men onderworpen aan de wetgeving van de uitzendstaat (werkgever). Deze app gaat niet over detachering. U kunt voor nadere informatie terecht bij de in deze app genoemde instanties.'
   one_physical_ms.answer_suppl = \
     '(art. 11(3)(a) Verordening 883/2004)'
 ---
@@ -92,7 +93,7 @@ code: |
   one_employer.question = \
     'Bent u in dienst van één onderneming of werkgever?'
   one_employer.subquestion = \
-    'Bijvoorbeeld: u woont in Duitsland en werkt zowel bij X GmbH in Nederland als in Duitsland.'
+    'Bijvoorbeeld: u woont in Duitsland en werkt voor een Duitse werkgever X GmbH zowel in Nederland als in Duitsland.'
   one_employer.answer_suppl = \
     '(art. 13(1)(b)(i) Verordening 883/2004). Er is een A1-formulier nodig dat is afgegeven door het bevoegde orgaan van uw woonstaat.'
 ---
@@ -104,7 +105,7 @@ code: |
 ---
 code: |
   two_ms_one_res.question = \
-    'Bent u in dienst van organisaties in twee lidstaten, waarvan er één uw woonstaat is?'
+    'Bent u in dienst van organisaties/ondernemingen of werkgevers in twee lidstaten, waarvan er één uw woonstaat is?'
   two_ms_one_res.subquestion = \
     'Bijvoorbeeld: u woont in Frankrijk en werkt bij X SARL in Frankrijk en bij Y BV in België.'
   two_ms_one_res.answer_suppl = \

@@ -18,9 +18,10 @@ subquestion: |
   
   - This module is not about taxation. For taxation one has to look at the applicable tax treaty.
   - This app is according the current applicable rules (Regulation No 883/2004 and Regulation No 987/2009). According to COVID-19 measures the rules can be ignored in case a cross border worker is obliged to work at home due to the crisis. This measure runs until 1 July 2022.
-  - You are subject to the legislation of a single Member State only, issued by the competent organ.
+  - You are subject to the legislation of a single Member State only, determined by the competent authority.
   - Working from home means that you are working in your residence State.
   - In case of working in two or more Member State one needs a so-called A1-form in which the competent organ of the residence State determines which legislation is applicable.
+  - The app does not cover work carried out on board of a seagoing vessel or in the cockpit or cabin of an aircraft.
 
   Marginal work (<5%) can be ignored.
 
@@ -55,7 +56,7 @@ code: |
   civil_servant_yn.question = \
     'Are you a civil servant?'
   civil_servant_yn.subquestion = \
-    'Please note: ensure that you are treated as a civil servant under current legislation. This has recently changed for people in Dutch education under the "Wet Normalisering Rechtspositie Ambtenaren", who are no longer treated as civil servant.'
+    'Please note: check carefully whether you must be regarded as a civil servant under current legislation. This has changed under the "Wet Normalisering Rechtspositie Ambtenaren", for people working in the Dutch education system, who are no longer treated as civil servants.'
 ---
 code: |
   employee_yn.question = \
@@ -67,7 +68,7 @@ code: |
 ---
 code: |
   one_cs_yn.question = \
-    'Are you employed as a civil servant by organizations subject to legislation in only one Member State?'
+    'Are you a civil servant employed by only one organisation in a Member State?'
   one_cs_yn.subquestion = \
     'For example, you are employed by a municipality in the Netherlands, but not one in Germany or Belgium.'
   one_cs_yn.answer_suppl = \
@@ -77,7 +78,7 @@ code: |
   one_physical_ms.question = \
     f'Do you perform your work as { worker_type } in one Member State (not in case of posting)?'
   one_physical_ms.subquestion = \
-    'In case of posting one is subject to the legislation of the sending State. '
+    'In case of posting one is subject to the legislation of the sending State (employer). This app is not about posting. For further information, please contact the agencies mentioned in this app.'
   one_physical_ms.answer_suppl = \
     '(art. 11(3)(a) Reg. 883/2004)'
 ---
@@ -91,7 +92,7 @@ code: |
   one_employer.question = \
     'Are you employed by one undertaking or employer?'
   one_employer.subquestion = \
-    'For example: you are living in Germany and working at X GmbH in the Netherlands as in Germany as well.'
+    'For example: you live in Germany and work for a German employer at X GmbH both in the Netherlands and in Germany.'
   one_employer.answer_suppl = \
     '(art. 13(1)(b)(i) Reg. No 883/2004). An A1-form is needed issued by the competent organ of your residence State.'
 ---
@@ -103,7 +104,7 @@ code: |
 ---
 code: |
   two_ms_one_res.question = \
-    'Are you employed by organizations in two Member States, one of which is your residence State?'
+    'Are you employed by organisations/companies or employers in two Member States, one of which is your residence State?'
   two_ms_one_res.subquestion = \
     'For example: you are living in France and working at X SARL in France and at Y BV in Belgium.'
   two_ms_one_res.answer_suppl = \
