@@ -32,7 +32,7 @@ continue button field: opening_notice
 ---
 question: Notice
 subquestion: |
-  For the next questions, if you perform activities as a civil servant in one Member State and activities as an employee or a freelancer in another Member State, the legislation of the Member State in which you are civil servant is 'leading'. 
+  For the next questions, if you perform activities as a civil servant in one Member State and activities as an employee or are self-employed in another Member State, the legislation of the Member State in which you are civil servant is 'leading'. 
 
   For example, if you work for a Dutch municipality (and are thus working as civil servant) and for a commercial company in Germany, ignore the function as employee in Germany when answering the next questions.
   
@@ -45,11 +45,11 @@ continue button field: non_eu_employer_notice
 ---
 question: Notice
 subquestion: |
-  If you perform work as an employee and work freelance, your work as an employee will determine where your social security is.
+  If you perform work as an employee and are self-employed, your work as an employee will determine where your social security is.
 
-  For example: in case you work as an employee in Belgium and work as freelancer in the Netherlands, you are subject to the Belgium legislation.
+  For example: in case you work as an employee in Belgium and are self-employed in the Netherlands, you are subject to the Belgium legislation.
 
-  Another example is that you are working as an employee from home (e.g. Belgium) and in the working State (Germany) for one employer on the one side and working as a freelancer (Belgium) on the other side. In that case the first step is to determine the applicable legislation in case of employment by applying the 25%-rule etc. If the outcome is e.g. Germany because you don’t meet the 25%-criterium, then the applicable legislation will be the Belgium one. 
+  Another example is that you are working as an employee from home (e.g. Belgium) and in the working State (Germany) for one employer on the one side and working as a self-employed (Belgium) on the other side. In that case the first step is to determine the applicable legislation in case of employment by applying the 25%-rule etc. If the outcome is e.g. Germany because you do not meet the 25%-criterium, then the applicable legislation will be the German one. 
 continue button field: employee_freelance_notice
 ---
 code: |
@@ -64,7 +64,7 @@ code: |
 ---
 code: |
   freelance_yn.question = \
-    'Do you perform freelance work?'
+    'Are you self-employed?'
 ---
 code: |
   one_cs_yn.question = \
@@ -94,7 +94,7 @@ code: |
   one_employer.subquestion = \
     'For example: you live in Germany and work for a German employer at X GmbH both in the Netherlands and in Germany.'
   one_employer.answer_suppl = \
-    '(art. 13(1)(b)(i) Reg. No 883/2004). An A1-form is needed issued by the competent organ of your residence State.'
+    '(art. 13(1)(b)(i) Reg. No 883/2004). An A1-form, issued by the competent organ of your residence State, is required.'
 ---
 code: |
   twentyfive_percent_freelance.question = \
@@ -116,7 +116,7 @@ code: |
   employers_one_ms.subquestion = \
     'For example, you are living in Belgium and working at X BV and at Y BV in the Netherlands.'
   employers_one_ms.answer_suppl = \
-    '(art. 13(1)(b)(ii) Reg. No 883/2004). An A1-form is needed issued by the competent organ of your residence State.'
+    '(art. 13(1)(b)(ii) Reg. No 883/2004). An A1-form, issued by the competent organ of your residence State, is required.'
 ---
 code: |
   multiple_non_res_ms.question = \
@@ -124,11 +124,11 @@ code: |
   multiple_non_res_ms.subquestion = \
     'For example: you are living in Belgium and you are working as an employee at X GmbH in Germany and at Y BV in the Netherlands.'
   multiple_non_res_ms.answer_suppl = \
-    '(art. 13(1)(b)(iv) Reg. No 883/2004). An A1-form is needed issued by the competent organ of your residence State.'
+    '(art. 13(1)(b)(iv) Reg. No 883/2004). An A1-form, issued by the competent organ of your residence State, is required.'
 ---
 code: |
   one_physical_ms_freelance.question = \
-    'Do you physically perform your freelance work in one Member State ?'
+    'Do you physically perform your self-employed work in one Member State?'
   one_physical_ms_freelance.answer_suppl = \
     '(art. 11(3)(a) Reg. No 883/2004)'
 ---
@@ -162,7 +162,7 @@ code: |
 ---
 code: |
   outcome_dict['center_of_interest'] = \
-    """Your social security is in the Member State that is the centre of interest of your freelance work.**
+    """Your social security is in the Member State that is the centre of interest of your self-employed work.**
 
   ***The ‘centre of interest’ of the activities of a self-employed person shall be determined by taking account of all the aspects of that person’s occupational activities, notably the place where the person’s fixed and permanent place of business is located, the habitual nature or the duration of the activities pursued, the number of services rendered, and the intention of the person concerned as revealed by all the circumstances*"""
 ---
