@@ -32,7 +32,7 @@ continue button field: opening_notice
 ---
 question: Notice
 subquestion: |
-  Voor de volgende vragen geldt dat als u werkzaamheden verricht als ambtenaar in de ene lidstaat en werkzaamheden als werknemer of freelancer in een andere lidstaat, de wetgeving van de lidstaat waar u ambtenaar bent ‘leidend’ is.
+  Voor de volgende vragen geldt dat als u werkzaamheden verricht als ambtenaar in de ene lidstaat en werkzaamheden als werknemer of zelfstandige in een andere lidstaat, de wetgeving van de lidstaat waar u ambtenaar bent ‘leidend’ is.
 
   Werkt u bijvoorbeeld voor een Nederlandse gemeente (en dus als ambtenaar) en voor een onderneming in Duitsland, laat dan bij het beantwoorden van de volgende vragen de functie als werknemer in Duitsland buiten beschouwing.
 
@@ -46,11 +46,11 @@ continue button field: non_eu_employer_notice
 ---
 question: Notice
 subquestion: |
-  Als u arbeid verricht als werknemer en als freelancer werkt, bepaalt uw werk als werknemer onder welke socialezekerheidswetgeving u valt.
+  Als u arbeid verricht als werknemer en als zelfstandige werkt, bepaalt uw werk als werknemer onder welke socialezekerheidswetgeving u valt.
 
-  Bijvoorbeeld: werkt u als werknemer in België en als freelancer in Nederland, dan valt u onder de Belgische wetgeving.
+  Bijvoorbeeld: werkt u als werknemer in België en als zelfstandige in Nederland, dan valt u onder de Belgische wetgeving.
 
-  Een ander voorbeeld is dat men als werknemer vanuit huis (bijvoorbeeld België) en in de werkstaat (Duitsland) werkt voor een werkgever enerzijds en als freelancer (België) anderzijds. In dat geval is de eerste stap het bepalen van de toepasselijke wetgeving bij tewerkstelling door toepassing van de 25%-regel etc. Als de uitkomst bijvoorbeeld de Duitse wetgeving is omdat men niet aan het 25%-criterium voldoet, dan is de Duitse wetgeving van toepassing.
+  Een ander voorbeeld is dat men als werknemer vanuit huis (bijvoorbeeld België) en in de werkstaat (Duitsland) werkt voor een werkgever enerzijds en als zelfstandige (België) anderzijds. In dat geval is de eerste stap het bepalen van de toepasselijke wetgeving bij tewerkstelling door toepassing van de 25%-regel etc. Als de uitkomst bijvoorbeeld de Duitse wetgeving is omdat men niet aan het 25%-criterium voldoet, dan is de Duitse wetgeving van toepassing.
 continue button field: employee_freelance_notice
 ---
 code: |
@@ -87,7 +87,7 @@ code: |
   twentyfive_percent.question = \
     'Verricht u meer dan 25% van uw arbeidstijd en/of ontvangt u 25% van uw totale bezoldiging in de lidstaat waar u woont?'
   twentyfive_percent.answer_suppl = \
-    '(art. 13(1)(a) Verordening 883/2004 juncto art. 14(8) en (10) Verordening 987/2009). Er is een A1-formulier nodig dat is afgegeven door het bevoegde orgaan van uw woonstaat.'
+    '(art. 13(1)(a) Verordening 883/2004 juncto art. 14(8) en (10) Verordening 987/2009). Er is een A1-formulier nodig dat wordt afgegeven door het bevoegde orgaan van uw woonstaat.'
 ---
 code: |
   one_employer.question = \
@@ -95,13 +95,13 @@ code: |
   one_employer.subquestion = \
     'Bijvoorbeeld: u woont in Duitsland en werkt voor een Duitse werkgever X GmbH zowel in Nederland als in Duitsland.'
   one_employer.answer_suppl = \
-    '(art. 13(1)(b)(i) Verordening 883/2004). Er is een A1-formulier nodig dat is afgegeven door het bevoegde orgaan van uw woonstaat.'
+    '(art. 13(1)(b)(i) Verordening 883/2004). Er is een A1-formulier nodig dat wordt afgegeven door het bevoegde orgaan van uw woonstaat.'
 ---
 code: |
   twentyfive_percent_freelance.question = \
     'Werkt u als zelfstandige en bedraagt de omzet, de arbeidstijd, het aantal verleende diensten en/of het inkomen meer dan 25% in de woonstaat?'
   twentyfive_percent_freelance.answer_suppl = \
-    '(art. 13(2)(a) Verodening 883/2004 juncto art. 14(8) an (10) Reg. No 987/2009)'
+    '(art. 13(2)(a) Verordening 883/2004 juncto art. 14(8) en (10) Verordening No 987/2009)'
 ---
 code: |
   two_ms_one_res.question = \
@@ -117,7 +117,7 @@ code: |
   employers_one_ms.subquestion = \
     'U woont bijvoorbeeld in België en werkt bij X BV en bij Y BV in Nederland.'
   employers_one_ms.answer_suppl = \
-    '(art. 13(1)(b)(ii) Verordening 883/2004). Er is een A1-formulier nodig dat is afgegeven door het bevoegde orgaan van uw woonstaat.'
+    '(art. 13(1)(b)(ii) Verordening 883/2004). Er is een A1-formulier nodig dat wordt afgegeven door het bevoegde orgaan van uw woonstaat.'
 ---
 code: |
   multiple_non_res_ms.question = \
@@ -125,7 +125,7 @@ code: |
   multiple_non_res_ms.subquestion = \
     'Bijvoorbeeld: u woont in België en werkt als werknemer bij X GmbH in Duitsland en bij Y BV in Nederland.'
   multiple_non_res_ms.answer_suppl = \
-    '(art. 13(1)(b)(iv) Reg. No 883/2004). Er is een A1-formulier nodig dat is afgegeven door het bevoegde orgaan van uw woonstaat.'
+    '(art. 13(1)(b)(iv) Verordening No 883/2004). Er is een A1-formulier nodig dat wordt afgegeven door het bevoegde orgaan van uw woonstaat.'
 ---
 code: |
   one_physical_ms_freelance.question = \
