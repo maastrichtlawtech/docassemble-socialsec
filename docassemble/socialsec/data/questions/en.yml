@@ -19,8 +19,8 @@ subquestion: |
   - This module is not about taxation. For taxation one has to look at the applicable tax treaty.
   - This app is according the current applicable rules (Regulation No 883/2004 and Regulation No 987/2009). According to COVID-19 measures the rules can be ignored in case a cross border worker is obliged to work at home due to the crisis. This measure runs till 1 July 2023.
   - You are subject to the legislation of a single Member State only, determined by the competent authority.
-  - Working from home means that you are working in your residence State.
-  - In case of working in two or more Member State one needs a so-called A1-form in which the competent organ of the residence State determines which legislation is applicable.
+  - Working from home means that you are working in your residence state.
+  - In case of working in two or more Member State one needs a so-called A1-form in which the competent organ of the residence state determines which legislation is applicable.
   - The app does not cover work carried out on board of a seagoing vessel or in the cockpit or cabin of an aircraft.
 
   Marginal work (<5%) can be ignored.
@@ -92,7 +92,7 @@ code: |
   twentyfive_percent.question = \
     'Do you perform more than 25% of your working time and/or receive 25% of your total remuneration in your residence Member State?'
   twentyfive_percent.answer_suppl = \
-    '(art. 13(1)(a) Reg. No 883/2004 juncto art. 14(8) and (10) Reg. No 987/2009). An A1-form is needed issued by the competent organ of your residence State'
+    '(art. 13(1)(a) Reg. No 883/2004 juncto art. 14(8) and (10) Reg. No 987/2009). An A1-form is needed issued by the competent organ of your residence state'
 ---
 code: |
   one_employer.question = \
@@ -100,7 +100,7 @@ code: |
   one_employer.subquestion = \
     'For example: you live in Germany and work for a German employer at X GmbH both in the Netherlands and in Germany.'
   one_employer.answer_suppl = \
-    '(art. 13(1)(b)(i) Reg. No 883/2004). An A1-form, issued by the competent organ of your residence State, is required.'
+    '(art. 13(1)(b)(i) Reg. No 883/2004). An A1-form, issued by the competent organ of your residence state, is required.'
 ---
 code: |
   twentyfive_percent_freelance.question = \
@@ -110,7 +110,7 @@ code: |
 ---
 code: |
   two_ms_one_res.question = \
-    'Are you employed by organisations/companies or employers in two Member States, one of which is your residence State?'
+    'Are you employed by organisations/companies or employers in two Member States, one of which is your residence state?'
   two_ms_one_res.subquestion = \
     'For example: you are living in France and working at X SARL in France and at Y BV in Belgium.'
   two_ms_one_res.answer_suppl = \
@@ -122,7 +122,7 @@ code: |
   employers_one_ms.subquestion = \
     'For example, you are living in Belgium and working at X BV and at Y BV in the Netherlands.'
   employers_one_ms.answer_suppl = \
-    '(art. 13(1)(b)(ii) Reg. No 883/2004). An A1-form, issued by the competent organ of your residence State, is required.'
+    '(art. 13(1)(b)(ii) Reg. No 883/2004). An A1-form, issued by the competent organ of your residence state, is required.'
 ---
 code: |
   multiple_non_res_ms.question = \
@@ -130,7 +130,7 @@ code: |
   multiple_non_res_ms.subquestion = \
     'For example: you are living in Belgium and you are working as an employee at X GmbH in Germany and at Y BV in the Netherlands.'
   multiple_non_res_ms.answer_suppl = \
-    '(art. 13(1)(b)(iv) Reg. No 883/2004). An A1-form, issued by the competent organ of your residence State, is required.'
+    '(art. 13(1)(b)(iv) Reg. No 883/2004). An A1-form, issued by the competent organ of your residence state, is required.'
 ---
 code: |
   one_physical_ms_freelance.question = \
@@ -144,7 +144,7 @@ code: |
 ---
 code: |
   outcome_dict['residence_country'] = \
-    "Your social security is in your residence State."
+    "Your social security is in your residence state."
 ---
 code: |
   outcome_dict['employer_ms'] = \
@@ -164,7 +164,7 @@ code: |
 ---
 code: |
   outcome_dict['not_res_country'] = \
-    "Out of the two Member States in which your two employers are situated, your social security is in the Member State that is not your residence State."
+    "Out of the two Member States in which your two employers are situated, your social security is in the Member State that is not your residence state."
 ---
 code: |
   outcome_dict['center_of_interest'] = \
