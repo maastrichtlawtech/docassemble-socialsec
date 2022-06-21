@@ -79,7 +79,10 @@ code: |
   one_physical_ms.question = \
     f'Verricht u uw werkzaamheden als { worker_type } in één lidstaat (niet als detachering)?'
   one_physical_ms.subquestion = \
-    'Voorbeeld: u woont in België en werkt deels thuis voor een Nederlandse werkgever. In dit voorbeeld verricht u uw werkzaamheden in twee lidstaten. (Noot: indien u al uw werkzaamheden vanuit dezelfde lidstaat verricht als waar u woont, bent u geen grensarbeider en is deze app niet op toe van toepassing.)
+    '- Voorbeeld 1: u woont in België en werkt deels thuis voor een Nederlandse werkgever. In dit voorbeeld verricht u uw werkzaamheden in twee lidstaten.
+    - Voorbeeld 2: u woont in België, werkt voor een Nederlandse werkgever en verricht uw werkzaamheden uitsluitend in Nederland. In dit voorbeeld verricht u uw werkzaamheden in één lidstaat.
+    - Voorbeeld 3: u woont in België, werkt voor een Nederlandse werkgever en verricht uw werkzaamheden uitsluitend in België. In dit voorbeeld verricht u uw werkzaamheden in één lidstaat.
+    (Noot: indien u al uw werkzaamheden vanuit dezelfde lidstaat verricht als waar u woont, bent u geen grensarbeider en is deze app niet op toe van toepassing.)
     
     Bij detachering is men onderworpen aan de wetgeving van de uitzendstaat (werkgever). Deze app gaat niet over detachering. U kunt voor nadere informatie terecht bij de in deze app genoemde instanties.'
   one_physical_ms.answer_suppl = \
