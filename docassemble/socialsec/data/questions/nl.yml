@@ -79,7 +79,9 @@ code: |
   one_physical_ms.question = \
     f'Verricht u uw werkzaamheden als { worker_type } in één lidstaat (niet als detachering)?'
   one_physical_ms.subquestion = \
-    'Bij detachering is men onderworpen aan de wetgeving van de uitzendstaat (werkgever). Deze app gaat niet over detachering. U kunt voor nadere informatie terecht bij de in deze app genoemde instanties.'
+    'Voorbeeld: u woont in België en werkt deels thuis voor een Nederlandse werkgever. In dit voorbeeld verricht u uw werkzaamheden in twee lidstaten. (Noot: indien u al uw werkzaamheden vanuit dezelfde lidstaat verricht als waar u woont, bent u geen grensarbeider en is deze app niet op toe van toepassing.)
+    
+    Bij detachering is men onderworpen aan de wetgeving van de uitzendstaat (werkgever). Deze app gaat niet over detachering. U kunt voor nadere informatie terecht bij de in deze app genoemde instanties.'
   one_physical_ms.answer_suppl = \
     '(art. 11(3)(a) Verordening 883/2004)'
 ---
