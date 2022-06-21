@@ -78,7 +78,12 @@ code: |
   one_physical_ms.question = \
     f'Do you perform your work as { worker_type } in one Member State (not in case of posting)?'
   one_physical_ms.subquestion = \
-    'In case of posting one is subject to the legislation of the sending State (employer). This app is not about posting. For further information, please contact the agencies mentioned in this app.'
+    '- Example 1: You reside in Belgium, work for a Dutch employer, and perform your work partly in Belgium (eg at home) and partly in the Netherlands. In this example, you perform your work in two Member States.
+    - Example 2: You reside in Belgium, work for a Dutch employer, and perform your work exclusively in the Netherlands. In this example, you perform your work in one Member State.
+    - Example 3: You reside in Belgium, work for a Dutch employer, and perform your work exclusively in Belgium. In this example, you perform your work in one Member State.
+    (Note: if you perform your work exclusively in the same Member State as where you reside, you are not a cross-border worker and this app does not apply to you).
+    
+    In case of posting one is subject to the legislation of the sending State (employer). This app is not about posting. For further information, please contact the agencies mentioned in this app.'
   one_physical_ms.answer_suppl = \
     '(art. 11(3)(a) Reg. 883/2004)'
 ---
